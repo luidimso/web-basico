@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>ECMAScript 6</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
+    <script type="text/babel">
+      class Produto{
+        constructor(nome, preco){
+          this.nome = nome;
+          this.preco = preco;
+        }
+
+        escreverDados(){
+          alert(`Minha ${this.nome} custa ${this.preco},00 reais`);
+        }
+      }
+
+      var caneta = new Produto("Caneta Bic", 3);
+
+      caneta.escreverDados();
+    </script>
+  </head>
+
+  <body>
+
+  </body>
+</html>

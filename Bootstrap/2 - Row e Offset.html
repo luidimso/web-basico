@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Bootstrap - Rows</title>
+
+    <style>
+      p, h1{
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+
+      img.icone{
+        max-width: 150px;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .exemplo2{
+        height: 200px;
+      }
+
+      .red{
+        background: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <img class="icone" src="Imagens/jpg.png">
+          <h1>JPG</h1>
+          <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <img class="icone" src="Imagens/pdf.ico">
+          <h1>PDF</h1>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+
+        <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <img class="icone" src="Imagens/zip.png">
+          <h1>ZIP</h1>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+
+        <div class="clearfix visible-md-block"></div>
+      </div>
+
+      <div class="row">
+        <div class="exemplo2 red col-sm-12 col-md-10 col-md-offset-1"></div>
+      </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

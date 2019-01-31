@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Solicitação</title>
+  </head>
+
+  <body>
+    <h1></h1>
+    <div id="dinamico"></div>
+    <button type="button" name="button" onclick="carregarDados()">Carregar</button>
+
+    <script type="text/javascript">
+      function carregarDados(){
+        var ajax = new XMLHttpRequest();
+
+        ajax.open('GET', 'dados.txt', true); //última opção: sincronização
+        ajax.send();
+        ajax.onreadystatechange = function() {
+          if(ajax.status == 200){
+            if(ajax.readyState == 2){
+              console.log("Enviado");
+            }
+
+            if(ajax.readyState == 3){
+              console.log("Carregando");
+            }
+
+            if(ajax.readyState == 4){
+              console.log(ajax.responseText);
+
+              var elemento = document.getElementById("dinamico");
+              elemento.innerHTML = ajax.responseText;
+
+              var titulo = document.getElementsByTagName("h1");
+              titulo[0].innerHTML = ajax.responseText;
+            }
+          } else{
+            console.log("Página não encontrada");
+          }
+        };
+
+        console.log(ajax);
+      }
+
+      /*
+      --- ready state ---
+      0 = requisição não iniciada
+      1 = conexão estabelecida
+      2 = requisição recebida
+      3 = processando requisição
+      4 = requisição finalizada
+
+      --- status ---
+      200 = OK
+      404 = Página não encontrada
+      */
+    </script>
+  </body>
+</html>

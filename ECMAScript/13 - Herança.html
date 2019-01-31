@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>ECMAScript 6</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
+    <script type="text/babel">
+      class Poligono{
+        constructor(lados, altura, largura, nome){
+          this.lados = lados;
+          this.altura = altura;
+          this.largura = largura;
+          this.nome = nome;
+        }
+
+        escrever(){
+          alert(`Eu sou um ${this.nome}, tenho ${this.lados} lados, ${this.largura} cm de largura e ${this.altura} cm de altura.`);
+        }
+      }
+
+      class Quadrado extends Poligono{
+        constructor(altura, largura){
+          super(4, altura, largura, "Quadrado");
+        }
+      }
+
+      var hexagono = new Poligono(6, 10, 8, "hexagono");
+      hexagono.escrever();
+
+      var quadrado = new Quadrado(10, 10);
+      quadrado.escrever();
+    </script>
+  </head>
+
+  <body>
+
+  </body>
+</html>

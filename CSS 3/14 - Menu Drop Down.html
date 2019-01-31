@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Texto do documento</title>
+        <meta charset="utf-8">
+
+        <style>
+          nav ol, ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+          }
+
+          nav ol li{
+            float: left;
+            position: relative;
+          }
+
+          nav ol li a, nav ol li ul li{
+            padding: 5px 10px;
+            text-decoration: none;
+            background-color: #fff;
+            color: darkgray;
+            display: inline-block;
+            border: 1px solid darkgray;
+            margin-right: -5px;
+            width: 150px;
+          }
+          /*Submenu*/
+          nav ol li ul{
+            display: none;
+            position: absolute;
+            padding-top: 5px;
+          }
+          /*Itens do submenu*/
+          nav ol li ul li{
+            width: 110px;
+            margin-top: -1px;
+          }
+
+          nav ol li ul li:hover{
+            background-color: #ddd;
+          }
+
+          nav li:hover ul{
+            display: block;
+          }
+
+          nav ol li a:hover{
+            background-color: #ddd;
+          }
+        </style>
+    </head>
+    <body>
+      <nav>
+        <ol>
+            <li><a href="http://www.wwe.com/superstars/shinsuke-nakamura">Shinsuke Nakamura</a>
+              <ul>
+                <li>História</li>
+                <li>Conquistas</li>
+                <li>fotos</li>
+              </ul>
+            </li>
+
+            <li><a href="http://www.wwe.com/superstars/john-cena">John Cena</a>
+              <ul>
+                <li>História</li>
+                <li>Conquistas</li>
+                <li>fotos</li>
+              </ul>
+            </li>
+
+            <li><a href="http://www.wwe.com/superstars/finn-balor">Finn Bálor</a>
+              <ul>
+                <li>História</li>
+                <li>Conquistas</li>
+                <li>fotos</li>
+              </ul>
+            </li>
+
+            <li><a href="http://www.wwe.com/superstars/roman-reigns">Roman Reigns</a>
+              <ul>
+                <li>História</li>
+                <li>Conquistas</li>
+                <li>fotos</li>
+              </ul>
+            </li>
+        </ol>
+      </nav>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>ECMAScript 6</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
+    <script type="text/babel">
+      var lutador = {
+        nome: "CM Punk",
+        golpes: ["Roundhouse Kick", "Diving Elbow", "Go To Sleep", "Anaconda Vise"],
+        escreverGolpes(){
+          this.golpes.forEach(finishers => alert(this.nome + " aplica " + finishers));
+        }
+      }
+
+      lutador.escreverGolpes();
+    </script>
+  </head>
+
+  <body>
+
+  </body>
+</html>

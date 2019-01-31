@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript</title>
+
+    <script>
+      function calcularDiaria(){
+        return Math.round(2000 / 30);
+      }
+
+      function calcularDiaria2(){
+        return Math.ceil(2000 / 30);
+      }
+
+      function calcularDiaria3(){
+        return Math.floor(2000 / 30);
+      }
+
+      function calcularDiaria4(){
+        return (2000 / 30).toFixed(2);
+      }
+
+      var arredondarMaisProximo = calcularDiaria();
+      var arredondarSempreMaior = calcularDiaria2();
+      var arredondarSempreMenor = calcularDiaria3();
+      var arredondarComDuasCasas = calcularDiaria4();
+
+      alert(arredondarMaisProximo);
+      alert(arredondarSempreMaior);
+      alert(arredondarSempreMenor);
+      alert(arredondarComDuasCasas) ;
+    </script>
+  </head>
+</html>

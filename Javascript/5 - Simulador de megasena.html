@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript</title>
+
+    <script>
+      var sorteio;
+      var mega = new Array();
+      var i = 0;
+
+      while(i < 6){
+        sorteio = Math.ceil(Math.random()*60);
+
+        if(mega.indexOf(sorteio) < 0){
+          mega.push(sorteio);
+          i++;
+        }
+      }
+
+      alert(mega);
+    </script>
+  </head>
+</html>

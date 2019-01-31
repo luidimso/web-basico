@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <title>Elemento Head</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Luidi Matheus">
+        <meta name="generator" content="Text Editot">
+        <meta name="Keywords" content="HTML5, Front End">
+        <meta name="description" content="Curso HTML 5">
+        <meta name="application-name" content="Aplicativo">
+        <meta http-equiv="refresh" content="8">
+        <script>
+            function sorteioNumero(){
+                sorteio.innerHTML = Math.round(Math.random() * 50);
+            }
+            
+            window.onload = sorteioNumero;
+        </script>
+    </head>
+    
+    <body>
+        <p id="sorteio"></p>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+
+    <style>
+      #janela1{
+        width: 300px;
+        height: 300px;
+        background-color: #069;
+        margin-top: 20px;
+      }
+
+      #janela2{
+        width: 200px;
+        height: 200px;
+        border: 1px solid #666;
+        margin-top: 10px;
+      }
+    </style>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+      function mensagem(){
+        alert("Botão CSS3");
+        $("#css").unbind("click", mensagem);
+      };
+
+      function mostrar(){
+        $("#janela1").show();
+      };
+
+      function esconder(){
+        $("#janela1").hide();
+      };
+
+      function aplicarCor(e){
+        $cor = e.data.cor;
+        $largura = e.data.largura;
+
+        $("#janela2").css("background-color", $cor);
+        $("#janela2").css("width", $largura);
+      };
+
+      $(function(e){
+        $("#janela1").hide();
+
+        $("#html").click(function(e){
+          alert("Botão HTML5");
+        });
+
+        $("#css").bind("click", mensagem);
+
+        $("#mostrar").hover(mostrar, esconder);
+
+        $("#azul").bind("click", {cor:"blue", largura:"250px"}, aplicarCor);
+
+        $("#vermelho").bind("click", {cor:"red", largura:"350px"}, aplicarCor);
+
+        $("#verde").bind("click", {cor:"green", largura:"250px"}, aplicarCor);
+      });
+    </script>
+  </head>
+
+  <body>
+    <input type="button" id="html" value="HTML5">
+    <input type="button" id="css" value="CSS3">
+    <input type="button" id="mostrar" value="Mostrar">
+    <input type="button" id="azul" value="Azul">
+    <input type="button" id="vermelho" value="Vermelho">
+    <input type="button" id="verde" value="Verde">
+
+    <div id="janela1">
+
+    </div>
+
+    <div id="janela2">
+
+    </div>
+  </body>
+</html>

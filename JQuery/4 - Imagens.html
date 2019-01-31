@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.8em;
+      }
+
+      ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 200px;
+      }
+
+      li{
+        margin-bottom: 5px;
+      }
+
+      li a{
+        paddin: 10px 6px;
+        color: #39c;
+        text-decoration: none;
+      }
+    </style>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+      $(function(){
+        $("li a[href$='.zip']").before("<img src='Imagens/zip.png' width=8% height=8%>");
+        $("li a[href$='.pdf']").before("<img src='Imagens/pdf.ico' width=8% height=8%>");
+      });
+    </script>
+  </head>
+
+  <body>
+    <ul>
+      <li><a href="Documentos/Curriculum.zip">Arquivo compactado</a></li>
+      <li><a href="Documentos/Curriculum.zip">Arquivo zipado</a></li>
+      <li><a href="Documentos/Curriculum.pdf">Documento de texto</a></li>
+      <li><a href="Documentos/Curriculum.pdf">Curriculum vitae</a></li>
+      <li><a href="Documentos/Curriculum.zip">Arquivo para download</a></li>
+    </ul>
+  </body>
+</html>

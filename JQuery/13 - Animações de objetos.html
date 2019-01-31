@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+
+    <style>
+      #janela1{
+        width: 300px;
+        height: 300px;
+        background-color: #069;
+        margin-top: 20px;
+      }
+
+      #janela2{
+        width: 300px;
+        height: 300px;
+        background-color: #069;
+        margin-top: 20px;
+      }
+    </style>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+      function mostrar(){
+        $("#janela1").fadeIn(500);
+        $("#janela2").slideDown(500);
+      };
+
+      function esconder(){
+        $("#janela1").fadeOut(500);
+        $("#janela2").slideUp(500);
+      };
+
+      function reverter(){
+        $("#janela1").fadeToggle(500);
+        $("#janela2").slideToggle(500);
+      };
+
+      $(function(e){
+        $("#mostrar").click(mostrar);
+        $("#esconder").click(esconder);
+        $("#reverter").click(reverter);
+      });
+    </script>
+  </head>
+
+  <body>
+    <input type="button" id="mostrar" value="Mostrar">
+    <input type="button" id="esconder" value="Esconder">
+    <input type="button" id="reverter" value="Reverter">
+
+    <div id="janela1">
+
+    </div>
+
+    <div id="janela2">
+
+    </div>
+  </body>
+</html>

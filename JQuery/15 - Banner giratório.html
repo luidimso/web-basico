@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+
+    <style>
+      #principal{
+        position: absolute;
+        height: 200px;
+        clip: rect(0 1000px 200px 0);
+      }
+
+      #janela{
+        position: relative;
+        height: 200px;
+        top: 0;
+        left: 0;
+      }
+
+      #janela img{
+        float: left;
+      }
+    </style>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+      var limite;
+      var largura;
+
+      function moverFotos(){
+        $("#janela").animate({left:"-=1000"},1000, function(e){
+          if($("#janela").position().left == limite){
+            $("#janela").css("left", 0);
+          }
+        });
+      };
+
+      $(function(e){
+        limite = $("#janela img").length * $("#janela img").width() * -1;
+        largura = $("#janela img").length * $("#janela img").width() + 1000;
+
+        $("#janela").append("<img>");
+        $("#janela img:last").attr("src", "Imagens/1.jpg");
+        $("#janela").css("width", largura + "px");
+        setInterval(moverFotos, 2000);
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="principal">
+      <div id="janela">
+        <img src="Imagens/1.jpg">
+        <img src="Imagens/2.png">
+        <img src="Imagens/3.png">
+        <img src="Imagens/4.jpg">
+        <img src="Imagens/5.png">
+      </div>
+    </div>
+  </body>
+</html>

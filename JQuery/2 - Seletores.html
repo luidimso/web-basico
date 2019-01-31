@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+  </head>
+
+  <body>
+    <nav>
+      <a href="https://pt.wikipedia.org/wiki/Jap%C3%A3o">Japão</a>
+      <a href="https://pt.wikipedia.org/wiki/It%C3%A1lia">Itália</a>
+      <a href="https://pt.wikipedia.org/wiki/Estados_Unidos">Estados Unidos</a>
+      <a href="https://pt.wikipedia.org/wiki/Rep%C3%BAblica_da_Irlanda">Irlanda</a>
+      <a href="https://pt.wikipedia.org/wiki/M%C3%A9xico">México</a>
+    </nav>
+
+    <a href="https://pt.wikipedia.org/wiki/Estados_Unidos">Estados Unidos</a>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+      alert("Essa página contém " + $("nav a").length + " links.");
+      $(function(){
+        $("nav a:contains('México')").css("color","red");
+        $("nav a").css("text-decoration","none");
+        $("nav a").css("display","block");
+      })
+    </script>
+  </body>
+</html>

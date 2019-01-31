@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Texto do documento</title>
+        <meta charset="utf-8">
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            table{
+                width: 700px;
+                margin: 0 auto;
+                border-spacing: 0;
+                border-right: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+            }
+            
+            caption{
+                font-size: 130%;
+                font-weight: bold;
+                padding: 5px 0;
+                background-color: #ececec;
+                border: 1px solid #ccc;
+                border-bottom: none;
+            }
+            
+            tr, td, th{
+                border: thin solid #ccc;
+                border-bottom: none;
+                border-right: none;
+                padding: 5px;
+            }
+            
+            th{
+                text-align: left;
+            }
+            
+            td{
+                text-align: center;
+            }
+            
+            thead th{
+                text-align: center;
+                background-color: #e0e0e0;
+            }
+            
+            thead tr th:first-child{
+                text-align: left;
+            }
+            
+            tfoot td{
+                font-size: .9em;
+                color: #666;    
+            }
+            
+            tbody tr:nth-child(odd){
+                background-color: #ddd;
+            }
+            
+            .coluna{
+                background-color: #f0f0f0;
+            }
+                
+        </style>   
+    </head>
+    
+    <body>
+        <table>
+            <caption>Royal Rumble 2018 - Top 6</caption>
+            
+            <colgroup>
+                <col class="coluna">
+                <col>
+                <col class="coluna">
+                <col>
+                <col class="coluna">
+            </colgroup>
+            
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>Número de entrada</td>
+                    <td>Tempo</td>
+                    <td>Eliminações</td>
+                    <td>Eliminado por</td>
+                </tr>
+            </thead>
+            
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>Número de entrada</td>
+                    <td>Tempo</td>
+                    <td>Eliminações</td>
+                    <td>Eliminado por</td>
+                </tr>
+            </tfoot>
+            
+            <tbody>
+                <tr>
+                    <td>Shinsuke Nakamura</td>
+                    <td>14</td>
+                    <td>44:38</td>
+                    <td>3</td>
+                    <td>-</td>
+                </tr>
+                
+                <tr>
+                    <td>Roman Reigns</td>
+                    <td>28</td>
+                    <td>21:52</td>
+                    <td>4</td>
+                    <td>Shinsuke Nakamura</td>
+                </tr>
+                
+                <tr>
+                    <td>John Cena</td>
+                    <td>20</td>
+                    <td>29:14</td>
+                    <td>3</td>
+                    <td>Shinsuke Nakamura</td>
+                </tr>
+                
+                <tr>
+                    <td>Finn Bálor</td>
+                    <td>2</td>
+                    <td>57:38</td>
+                    <td>4</td>
+                    <td>John Cena</td>
+                </tr>
+                
+                <tr>
+                    <td>Rey Mysterio</td>
+                    <td>27</td>
+                    <td>9:39</td>
+                    <td>1</td>
+                    <td>Finn Bálor</td>
+                </tr>
+                
+                <tr>
+                    <td>Randy Orton</td>
+                    <td>24</td>
+                    <td>13:55</td>
+                    <td>1</td>
+                    <td>Roman Reigns</td>
+                </tr>
+            </tbody>
+        </table>   
+    </body>
+</html>

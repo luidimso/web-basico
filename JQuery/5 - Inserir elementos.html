@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+
+    <style>
+      ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li{
+        display: inline-block;
+        margin-right: 10px;
+      }
+    </style>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+      $(function(){
+        $("<li><img src='Imagens/toad.png' width=25% height=25%></li>").insertBefore("li:first-child");
+        $("<li><img src='Imagens/yochi.jpg' width=25% height=25%></li>").insertAfter("li:nth(1)");
+      });
+    </script>
+  </head>
+
+  <body>
+    <ul>
+      <li><img src="Imagens/mario.jpg" width="25%" height="25%"></li>
+      <li><img src="Imagens/luigi.jpg" width="25%" height="25%"></li>
+      <li><img src="Imagens/peach.png" width="25%" height="25%"></li>
+    </ul>
+  </body>
+</html>

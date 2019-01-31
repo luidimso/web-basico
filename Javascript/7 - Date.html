@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript</title>
+
+    <script>
+      function doisDigitos(tempo){
+        if(tempo < 10){
+          return "0" + tempo;
+        }
+
+        else{
+          return tempo;
+        }
+      }
+
+      var agora = new Date();
+      var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+      var nascimento = new Date(1998, 7, 28);
+
+      /*Retorna o ano atual*/
+      alert(agora.getFullYear());
+
+      /*Retorna o mês atual*/
+      alert(meses[agora.getMonth()]);
+
+      /*Retorna o dia atual*/
+      alert(agora.getDate());
+
+      /*Data completa*/
+      alert(agora.getDate() + " de " + meses[agora.getMonth()] + " de " + agora.getFullYear());
+
+      /*Retorna o dia da semana*/
+      alert(nascimento.getDay());
+
+      /*Hora, minuto e segundo(com retorno de dois digitos)*/
+      alert(doisDigitos(agora.getHours()) + ":" + doisDigitos(agora.getMinutes()) + ":" + doisDigitos(agora.getSeconds()));
+    </script>
+  </head>
+</html>

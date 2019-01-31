@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+
+    <style>
+      nav ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      nav li{
+        list-style-type: none;
+        width: 256px;
+        height: 256px;
+        background-repeat: no-repeat;
+        margin-bottom: 1px;
+        cursor: pointer;
+      }
+
+      nav li:first-child{
+        background-image: url(Imagens/pdf.ico);
+      }
+
+      nav li:nth-child(2){
+        background-image: url(Imagens/zip.png);
+      }
+
+      nav li:nth-child(3){
+        background-image: url(Imagens/jpg.png);
+      }
+
+      #primeira{
+        width: 100%;
+        height: 800px;
+        background-color: aquamarine;
+      }
+
+      #segunda{
+        width: 100%;
+        height: 800px;
+        background-color: blueviolet;
+      }
+
+      #terceira{
+        width: 100%;
+        height: 800px;
+        background-color: brown;
+      }
+    </style>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+      $(function(e){
+        function redimensionar(){
+          var altura = $(window).height();
+
+          $("#primeira").css("height", altura);
+
+          $("#segunda").css("height", altura);
+
+          $("#terceira").css("height", altura);
+        }
+
+        $("nav li:first-child").click(function(e){
+          $("html, body").animate({scrollTop: $("#primeira").offset().top}, 1000);
+        });
+
+        $("nav li:nth-child(2)").click(function(e){
+          $("html, body").animate({scrollTop: $("#segunda").offset().top}, 1000);
+        });
+
+        $("nav li:nth-child(3)").click(function(e){
+          $("html, body").animate({scrollTop: $("#terceira").offset().top}, 1000);
+        });
+
+        $(window).resize(function(e){
+          redimensionar();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li id="tela1"></li>
+        <li id="tela2"></li>
+        <li id="tela3"></li>
+      </ul>
+    </nav>
+
+    <div id="primeira">
+
+    </div>
+
+    <div id="segunda">
+
+    </div>
+
+    <div id="terceira">
+
+    </div>
+  </body>
+</html>

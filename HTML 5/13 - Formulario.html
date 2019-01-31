@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Texto do documento</title>
+        
+        <script>
+            function mostrarResultado(){
+                document.getElementById("resultado").innerHTML = document.getElementById("irmaos").value;
+            }
+        </script>
+    </head>
+    
+    <body>
+        <h2>Formulário</h2>
+        
+        <form action="destino.html" method="post">
+            <input type="text" name="nome" id="nome" size="30" maxlength="100" required placeholder="Insira seu nome" autofocus>
+            
+            <label for="telefone">Telefone</label>
+            <input type="tel" name="telefone" id="telefone" size="20" maxlength="30">
+            
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" size="30" maxlength="60" required>
+            
+            <label for="website">Web Site</label>
+            <input type="url" name="website" id="website" size="30" maxlength="60">
+            
+            <input type="number" name="filhos" id="filhos" min="1" max="5" value="1">
+            
+            <label for="aniversario">Aniversario</label>
+            <input type="date" name="aniversario" id="aniversario" size="30">  
+            
+            <input type="submit" value="Enviar" id="enviar">
+            
+            <input type="text" name="nomeloja" id="nomeloja" placeholder="Digite o nome da loja" size="40" list="lojas">
+            <datalist id="lojas">
+                <option value="WWE Shop">WWE Shop</option>
+                <option value="Mercadão da Luta">Mercadão da Luta</option>
+                <option value="Luta Livre Shop">Luta Livre Shop</option>
+            </datalist>
+            
+            <input type="range" id="irmaos" min="1" max="10" value="1" onchange="mostrarResultado()">
+            <span id="resultado"></span>
+            
+            <input type="color" name="cor" id="cor">
+            
+            <input type="search" name="pesquisa">
+        </form>
+    </body>
+</html>    

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript</title>
+
+    <script>
+      function ordenarNumeros(a, b){
+        return a-b;
+      }
+
+      var salada = ["Uva", "Banana", "Pera"];
+      var numeros = [6,5,4,3,2,1];
+      alert(salada);
+
+      /*Adicionar no final*/
+      salada.push("Mamão");
+      alert(salada);
+
+      /*Adicionar no inicio*/
+      salada.unshift("Laranja");
+      alert(salada);
+
+      /*Retornar número de posições*/
+      alert(salada.length);
+
+      /*Excluir no final*/
+      salada.pop();
+      alert(salada);
+
+      /*Excluir no inicio*/
+      salada.shift();
+      alert(salada);
+
+      /*Pesquisar index com tal valor*/
+      alert(salada.indexOf("Uva"));
+
+      /*Ordenar em ordem alfabética*/
+      salada.sort();
+      alert(salada);
+
+      /*Ordenar números*/
+      numeros.sort(ordenarNumeros);
+      alert(numeros);
+    </script>
+  </head>
+</html>
